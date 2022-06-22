@@ -1,5 +1,7 @@
 package ch.bbw.user;
 
-public class Admin {
-    
+public class Admin extends Benutzer {
+    public Admin(String user, String passwort) {
+        super(user, passwort);
+    }
 }
