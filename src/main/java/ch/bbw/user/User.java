@@ -1,30 +1,64 @@
 package ch.bbw.user;
 
 import ch.bbw.exception.LoginException;
+import ch.bbw.exception.RegisterException;
 
 
-/*
+/**
  * @author Oliver Oswald
  * @version 1.0
  * @since 1.0
  */
 
-/*
+/**
  * class that represents a user of the application
 */
 public class User {
 
     private String name;
-    private String passwort;
+    private String password;
+    private UserController userController;
 
-    /*
-     * constructor
-     * @param name name of the user
-     * @param passwort password of the user
+    /**
+     * constructor to initialize the user
+     * @param the user controller object
      */
-    public User(String name, String passwort) {
-        this.name = name;
-        this.passwort = sha1(passwort);
+    public User(UserController userController) {
+        this.userController = userController;
+    }
+
+    /**
+     * constructor to copy the user object
+     * @param the user object
+     */
+    public User(User user) {
+        this.name = user.name;
+        this.password = user.password;
+        this.userController = user.userController;
+    }
+
+    /**
+     * getters and setters
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * getters and setters
+     * @return the password
+     */
+    public String getPassword() {
+        return password;
+    }
+
+    /**
+     * getters and setters
+     * @return the user controller
+     */
+    public UserController getUserController() {
+        return userController;
     }
 
     /*
@@ -47,15 +81,49 @@ public class User {
         }
     }
 
-    /*
+    /**
      * Method that checks if the password is correct
-     * @param passwort the password that should be checked
-     * @param user the user that should be checked
+     * @param password the password that should be checked
+     * @param name the name of the user that should be checked
      * @throws LoginException if the password is not correct
      */
-    public void login(String name, String passwort) throws LoginException {
-        if (!this.name.equals(name) || !this.passwort.equals(sha1(passwort))) {
+    public void login(String name, String password) throws LoginException {
+        if (!this.name.equals(name) || !this.password.equals(sha1(password))) {
             throw new LoginException("Login fehlgeschlagen");
         }
     }
+
+
+    /**
+     * Method that registers a new user and if successful adds the user to the userController
+     * @param name name of the user
+     * @param password password of the user
+     * @throws RegisterException if the user already exists
+     */
+    public void register(String name, String password) throws RegisterException {
+        if (userController.getUsers()
+                .stream()
+                .filter(o -> o.getName().equals(name) == true)
+                .findAny()
+                .isPresent() ? true : false) {
+            throw new RegisterException("Benutzer existiert bereits");
+        } else {
+            this.name = name;
+            this.password = sha1(password);
+            if(this instanceof Admin) {
+                userController.add(new Admin((Admin) this));
+            } else {
+                userController.add(new User(this));
+            }
+        }
+    }
+
+    /**
+     * Method that checks if the user is an admin
+     * @return true if the user is an admin
+     */
+    public boolean isAdmin() {
+        return false;
+    }
+
 }

@@ -18,4 +18,17 @@ public class UserController {
     public ArrayList<User> getUsers() {
         return users;
     }
+
+    public User getUser(String username) {
+        for (User user : users) {
+            if (user.getName().equals(username)) {
+                return user;
+            }
+        }
+        return null;
+    }
+
+    public void add(User user){
+        users.add(user);
+    }
 }
