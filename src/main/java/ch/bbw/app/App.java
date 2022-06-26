@@ -20,6 +20,10 @@ import ch.bbw.user.User;
  */
 public class App 
 {
+    
+    /** 
+     * @param args
+     */
     public static void main( String[] args )
     {
         Scanner in = new Scanner(System.in);

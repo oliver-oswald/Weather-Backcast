@@ -73,7 +73,7 @@ public class User {
         return userController;
     }
 
-    /*
+    /**
      * Method that encrypt the password with SHA-1
      * @param passwort the password that should be encrypted
      * @return the encrypted password
