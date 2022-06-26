@@ -38,11 +38,11 @@ public class Reader {
                 String place = (String) jsonObject.get("place");
                 String day = (String) jsonObject.get("day");
                 String weatherCondition = (String) jsonObject.get("weatherCondition");
-                int temperature = (int) jsonObject.get("temperature");
-                int humidity = (int) jsonObject.get("humidity");
-                int rainfall = (int) jsonObject.get("rainfall");
-                int windspeed = (int) jsonObject.get("windspeed");
-                int winddirection = (int) jsonObject.get("winddirection");
+                int temperature = Math.toIntExact((long) jsonObject.get("temperature"));
+                int humidity = Math.toIntExact((long) jsonObject.get("humidity"));
+                int rainfall = Math.toIntExact((long) jsonObject.get("rainfall"));
+                int windspeed = Math.toIntExact((long) jsonObject.get("windspeed"));
+                int winddirection = Math.toIntExact((long) jsonObject.get("winddirection"));
                 app.addWeather(place, day, weatherCondition, temperature, humidity, rainfall, windspeed,
                         winddirection);
             }

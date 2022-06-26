@@ -36,4 +36,9 @@ public class Weather {
     public void setWind(Wind wind) {
         this.wind = wind;
     }
+
+    @Override
+    public String toString() {
+        return "Weather \n" + description.toString() + "\n" + weatherCondition.toString() + "\n" + wind.toString();
+    }
 }

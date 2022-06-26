@@ -35,5 +35,10 @@ public class Description {
     public void setWeatherCondition(String weatherCondition) {
         this.weatherCondition = weatherCondition;
     }
+
+    @Override
+    public String toString() {
+        return "\tDescription \n" + "\t\tPlace: " + place + "\n" + "\t\tDay: " + day + "\n" + "\t\tWeather Condition: " + weatherCondition;
+    }
     
 }

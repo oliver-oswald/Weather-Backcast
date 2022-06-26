@@ -28,5 +28,11 @@ public class WebApp {
         weatherList.add(new Weather(place, day, weatherCondition, temperature, humidity, rainfall, windspeed,
                 winddirection));
     }
+
+    public void displayWeather() {
+        for (Weather weather : weatherList) {
+            System.out.println(weather.toString());
+        }
+    }
     
 }

@@ -24,4 +24,9 @@ public class Wind {
     public void setWinddirection(int winddirection) {
         this.winddirection = winddirection;
     }
+
+    @Override
+    public String toString() {
+        return "\tWind \n" + "\t\tWindspeed: " + windspeed + "\n" + "\t\tWinddirection: " + winddirection;
+    }
 }

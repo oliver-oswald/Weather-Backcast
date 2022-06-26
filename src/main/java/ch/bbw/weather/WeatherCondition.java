@@ -36,4 +36,10 @@ public class WeatherCondition {
         this.humidity = humidity;
     }
 
+    @Override
+    public String toString() {
+        return "\tWeatherCondition \n" + "\t\tTemperature: " + temperature + "\n" + "\t\tRainfall: " + rainfall + "\n"
+                + "\t\tHumidity: " + humidity;
+    }
+
 }
