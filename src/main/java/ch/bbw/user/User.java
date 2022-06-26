@@ -38,6 +38,18 @@ public class User {
     }
 
     /**
+     * constructor to inzialize a new user object
+     * @param name of the user
+     * @param password of the user
+     * @param userController of the application
+     */
+    public User(String name, String password, UserController userController) {
+        this.name = name;
+        this.password = password;
+        this.userController = userController;
+    }
+
+    /**
      * getters and setters
      * @return the name
      */

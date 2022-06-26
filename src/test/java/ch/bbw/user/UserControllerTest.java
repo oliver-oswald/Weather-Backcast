@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import ch.bbw.exception.RegisterException;
+import ch.bbw.exception.UserNotFoundException;
 
 public class UserControllerTest {
 
@@ -24,7 +25,11 @@ public class UserControllerTest {
             user.register("pp", "test");
         } catch (RegisterException e) {
         }
-        assert userController.getUser("pp") instanceof User;
+        try {
+            assert userController.getUser("pp") instanceof User;
+        } catch (UserNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
     @Test
@@ -33,7 +38,11 @@ public class UserControllerTest {
             admin.register("pp", "test");
         } catch (RegisterException e) {
         }
-        assert userController.getUser("pp") instanceof Admin;
+        try {
+            assert userController.getUser("pp") instanceof Admin;
+        } catch (UserNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }
     

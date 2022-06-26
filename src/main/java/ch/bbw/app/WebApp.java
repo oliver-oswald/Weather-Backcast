@@ -19,6 +19,10 @@ public class WebApp {
         return userController;
     }
 
+    public ArrayList<Weather> getWeatherList() {
+        return weatherList;
+    }
+
     public void addWeather(String place, String day, String weatherCondition, int temperature, int humidity, int rainfall,
             int windspeed, int winddirection) {
         weatherList.add(new Weather(place, day, weatherCondition, temperature, humidity, rainfall, windspeed,

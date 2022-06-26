@@ -2,6 +2,8 @@ package ch.bbw.user;
 
 import java.util.ArrayList;
 
+import ch.bbw.exception.UserNotFoundException;
+
 /**
  * @author Oliver Oswald
  * @version 1.0
@@ -27,14 +29,15 @@ public class UserController {
      * Method that returns the user with the given username
      * @param username of the user to retrieve
      * @return User object
+     * @throws UserNotFoundException if the user is not found
      */
-    public User getUser(String username) {
+    public User getUser(String username) throws UserNotFoundException {
         for (User user : users) {
             if (user.getName().equals(username)) {
                 return user;
             }
         }
-        return null;
+        throw new UserNotFoundException("no user with the given username");
     }
 
     /**

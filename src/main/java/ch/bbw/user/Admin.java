@@ -28,6 +28,16 @@ public class Admin extends User {
     }
 
     /**
+     * constructor to inzialize a new admin object
+     * @param name of the admin
+     * @param password of the admin
+     * @param userController of the application
+     */
+    public Admin(String name, String password, UserController userController) {
+        super(name, password, userController);
+    }
+
+    /**
      * Method that checks if the user is an admin
      * @return true if the user is admin
      */
