@@ -14,16 +14,35 @@ import ch.bbw.user.Admin;
 import ch.bbw.user.User;
 import ch.bbw.user.UserController;
 
+/**
+ * @author Oliver Oswald
+ * @version 1.0
+ * @since 1.0
+ */
+
+/**
+ * class that reads from the json file
+ */
 public class Reader {
     
     private WebApp app;
     private UserController userController;
 
+    /**
+     * constructor
+     * @param app the webapp
+     */
     public Reader(WebApp app) {
         userController = app.getUserController();
         this.app = app;
     }
 
+    /**
+     * reads the json file
+     * @throws FileNotFoundException if the file is not found
+     * @throws IOException if the file is not readable
+     * @throws ParseException if the file is not parsable
+     */
     public void readFile() {
         JSONParser parser = new JSONParser();
         try {

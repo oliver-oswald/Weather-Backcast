@@ -10,8 +10,13 @@ import ch.bbw.filesystem.Writer;
 import ch.bbw.user.User;
 
 /**
- * Hello world!
- *
+ * @author Oliver Oswald
+ * @version 1.0
+ * @since 1.0
+ */
+
+/**
+ * the main class of the application
  */
 public class App 
 {

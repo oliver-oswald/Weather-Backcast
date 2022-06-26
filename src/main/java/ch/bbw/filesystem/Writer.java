@@ -12,16 +12,33 @@ import ch.bbw.user.User;
 import ch.bbw.user.UserController;
 import ch.bbw.weather.Weather;
 
+/**
+ * @author Oliver Oswald
+ * @version 1.0
+ * @since 1.0
+ */
+
+/**
+* class that writes to the json file
+*/
 public class Writer {
     
     private ArrayList<Weather> weatherList;
     private UserController userController;
 
+    /**
+     * constructor
+     * @param app the webapp
+     */
     public Writer(WebApp app) {
         userController = app.getUserController();
         weatherList = app.getWeatherList();
     }
 
+    /**
+     * writes the json file
+     * @throws IOException if the file is not writable
+     */
     public void writeFile() {
         JSONArray weatherArray = new JSONArray();
         JSONArray userArray = new JSONArray();
