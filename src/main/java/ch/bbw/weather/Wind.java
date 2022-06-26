@@ -1,4 +1,4 @@
-package ch.bbw.wetter;
+package ch.bbw.weather;
 public class Wind {
     
 }
