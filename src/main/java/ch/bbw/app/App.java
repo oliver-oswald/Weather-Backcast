@@ -20,9 +20,16 @@ import ch.bbw.user.User;
  */
 public class App 
 {
+
+    /**
+     * the sole constructor
+     */
+    public App() {
+    }
     
     /** 
-     * @param args
+     * the main function of the application
+     * @param args the command line arguments
      */
     public static void main( String[] args )
     {

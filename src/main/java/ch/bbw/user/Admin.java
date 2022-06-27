@@ -13,7 +13,7 @@ public class Admin extends User {
 
     /**
      * constructor to initialize the admin
-     * @param the user controller object
+     * @param userController the user controller object
      */
     public Admin(UserController userController) {
         super(userController);
@@ -21,7 +21,7 @@ public class Admin extends User {
 
     /**
      * constructor to copy the admin object
-     * @param the admin object
+     * @param admin the admin object
      */
     public Admin(Admin admin) {
         super(admin);

@@ -39,9 +39,6 @@ public class Reader {
 
     /**
      * reads the json file
-     * @throws FileNotFoundException if the file is not found
-     * @throws IOException if the file is not readable
-     * @throws ParseException if the file is not parsable
      */
     public void readFile() {
         JSONParser parser = new JSONParser();

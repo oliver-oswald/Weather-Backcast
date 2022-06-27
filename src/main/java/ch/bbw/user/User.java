@@ -21,7 +21,7 @@ public class User {
 
     /**
      * constructor to initialize the user
-     * @param the user controller object
+     * @param userController object
      */
     public User(UserController userController) {
         this.userController = userController;
@@ -29,7 +29,7 @@ public class User {
 
     /**
      * constructor to copy the user object
-     * @param the user object
+     * @param user object
      */
     public User(User user) {
         this.name = user.name;

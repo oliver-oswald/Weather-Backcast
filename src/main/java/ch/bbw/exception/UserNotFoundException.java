@@ -9,7 +9,12 @@ package ch.bbw.exception;
 /**
  * Excepton class if the user was not found
  */
-public class UserNotFoundException extends Exception{
+public class UserNotFoundException extends Exception {
+    
+    /**
+     * constructor
+     * @param message of the exception
+     */
     public UserNotFoundException(String message) {
         super(message);
     }

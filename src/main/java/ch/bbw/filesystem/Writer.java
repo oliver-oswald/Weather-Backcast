@@ -37,7 +37,6 @@ public class Writer {
 
     /**
      * writes the json file
-     * @throws IOException if the file is not writable
      */
     public void writeFile() {
         JSONArray weatherArray = new JSONArray();

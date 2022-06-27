@@ -10,6 +10,11 @@ package ch.bbw.exception;
  * Excepton class if the login is invalid
  */
 public class LoginException extends Exception {
+
+    /**
+     * constructor
+     * @param message of the exception
+     */
     public LoginException(String message) {
         super(message);
     }

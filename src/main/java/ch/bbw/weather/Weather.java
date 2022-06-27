@@ -18,8 +18,13 @@ package ch.bbw.weather;
     /**
      * constructor
      * @param weatherCondition of the weather
-     * @param description of the weather
-     * @param wind of the weather
+     * @param place of the weather
+     * @param day of the weather
+     * @param temperature of the weather
+     * @param humidity of the weather
+     * @param rainfall of the weather
+     * @param windspeed of the weather
+     * @param winddirection of the weather 
      */
     public Weather(String place, String day, String weatherCondition, int temperature, int humidity, int rainfall,
             int windspeed, int winddirection) {
@@ -54,7 +59,7 @@ package ch.bbw.weather;
 
     /**
      * set the weather condition of the weather
-     * @param weatherCondition
+     * @param weatherCondition of the weather
      */
     public void setWeatherCondition(WeatherCondition weatherCondition) {
         this.weatherCondition = weatherCondition;
@@ -62,7 +67,7 @@ package ch.bbw.weather;
 
     /**
      * set the description of the weather
-     * @param description
+     * @param description of the weather
      */
     public void setDescription(Description description) {
         this.description = description;
@@ -70,7 +75,7 @@ package ch.bbw.weather;
 
     /**
      * set the wind of the weather
-     * @param wind
+     * @param wind of the weather
      */
     public void setWind(Wind wind) {
         this.wind = wind;

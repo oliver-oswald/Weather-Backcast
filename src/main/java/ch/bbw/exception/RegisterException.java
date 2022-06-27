@@ -10,6 +10,11 @@ package ch.bbw.exception;
  * Excepton class if the Regstration is invalid
  */
 public class RegisterException extends Exception {
+
+    /**
+     * constructor
+     * @param message of the exception
+     */
     public RegisterException(String message) {
         super(message);
     }

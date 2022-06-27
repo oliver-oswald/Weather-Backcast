@@ -18,6 +18,12 @@ public class UserController {
     private ArrayList<User> users = new ArrayList<User>();
 
     /**
+     * the sole constructor
+     */
+    public UserController() {
+    }
+
+    /**
      * Method that returns the userlist of the application
      * @return ArrayList of User objects
      */
