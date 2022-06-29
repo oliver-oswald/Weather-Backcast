@@ -48,6 +48,7 @@ public class App
         reader.readFile();
 
         System.out.println("Welcome to the Weather App!");
+        System.out.println("---------------------------");
         System.out.println("                   \\       /            _\\/_");
         System.out.println("                     .-'-.              //o\\  _\\/_");
         System.out.println("  _  ___  __  _ --_ /     \\ _--_ __  __ _ |  __/o\\ _");
